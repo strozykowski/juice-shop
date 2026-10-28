@@ -1,4 +1,14 @@
-- name: Endor Labs Scan
-  # You may pin to the exact commit or the version.
-  # uses: endorlabs/github-action@f46ffb04c928a9c9c356f9627bd60b710ed0963e
-  uses: endorlabs/github-action@v1.1.13
+name: "CI/CD Pipeline"
+on:
+  workflow_dispatch
+  
+env:
+  ANGULAR_CLI_VERSION: 13
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Endor Labs Scan
+        # You may pin to the exact commit or the version.
+        # uses: endorlabs/github-action@f46ffb04c928a9c9c356f9627bd60b710ed0963e
+        uses: endorlabs/github-action@v1.1.13
